@@ -126,4 +126,31 @@ a:hover {
     letter-spacing: 4px;
     font-size: 40px;
 }
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top:47px;
+}
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top:48px;
+}
 
+#toggle:checked + .checkbox {
+    background-clip: #ffffff;
+
+}
+#toggle:checked ~ .menu {
+    box-shadow: 0px 0px  0px 100vmax #ffffff;
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu-items {
+    visibility: visible;
+    opacity: 1;
+}
